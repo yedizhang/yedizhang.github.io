@@ -209,10 +209,10 @@ mjx-container { break-inside: avoid; }
     --text-font: var(--myfont); /*正文字体*/
     --title-font: var(--myfont); /*标题字体*/
     --latex-font: var(--myfont); /*LaTeX字体(不含英语)*/
-    --text-line-height: 1.0; /*正文行间距*/
+    --text-line-height: 1.4; /*正文行间距*/
     --code-line-height: 1.0; /*代码块行间距*/
     --p-spacing: 0.8rem; /*段间距*/
-    --text-size: 15px;
+    --text-size: 22px;
 }/*
  * Copyright (C) 2018 Drake, Inc.
  *
@@ -547,7 +547,7 @@ img {
 }
 
 #write {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 30px 100px;
 }
