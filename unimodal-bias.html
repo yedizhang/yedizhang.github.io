@@ -50,11 +50,11 @@
 	
 	a:link,a:visited
 	{
-		color: #1367a7;
+		color: #2268c3;
 		text-decoration: none;
 	}
 	a:hover {
-		color: #208799;
+		color: #2268c3;
 	}
 	
 	td.dl-link {
@@ -119,10 +119,10 @@
 
 <html>
 <head>
-	<title>A Theory of Unimodal Bias in Multimodal Learning</title>
+	<title>Understanding Unimodal Bias in Multimodal Deep Linear Networks</title>
 	<meta property="og:image" content="./img/unimodal-bias/L2_late_feat.gif"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="A Theory of Unimodal Bias in Multimodal Learning" />
-	<meta property="og:description" content="In multimodal learning, late and intermediate fusion architectures can give rise to long unimodal phases and even prioritize learning a less helpful modality." />
+	<meta property="og:title" content="Understanding Unimodal Bias in Multimodal Deep Linear Networks" />
+	<meta property="og:description" content="We study multimodal deep linear networks and show that late and intermediate fusion architectures can give rise to long unimodal phases and permanent unimodal bias." />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJGLRC78GK"></script>
@@ -139,10 +139,11 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px;font-weight:400">A Theory of Unimodal Bias in Multimodal Learning</span>
+		<span style="font-size:32px;font-weight:400">Understanding Unimodal Bias in Multimodal Deep Linear Networks</span>	
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr><br></tr>
+				<tr><span style="font-size:20px;font-weight:400">ICML 2024</span></tr>
 				<tr>
 					<td align=center width=100px>
 						<center>
@@ -178,7 +179,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Using multiple input streams simultaneously in training multimodal neural networks is intuitively advantageous, but practically challenging. A key challenge is unimodal bias, where a network overly relies on one modality and ignores others during joint training. While unimodal bias is well-documented empirically, our theoretical understanding of how architecture and data statistics influence this bias remains incomplete. Here we develop a theory of unimodal bias with deep multimodal linear networks. We calculate the duration of the unimodal phase in learning as a function of the depth at which modalities are fused within the network, dataset statistics, and initialization. We find that the deeper the layer at which fusion occurs, the longer the unimodal phase. A long unimodal phase can lead to a generalization deficit and permanent unimodal bias in the overparametrized regime. In addition, our theory reveals the modality learned first is not necessarily the modality that contributes more to the output. Our results, derived for multimodal linear networks, extend to ReLU networks in certain settings. Taken together, this work illuminates pathologies of multimodal learning under joint training, showing that late and intermediate fusion architectures can give rise to long unimodal phases and permanent unimodal bias.
+				Using multiple input streams simultaneously to train multimodal neural networks is intuitively advantageous but practically challenging. A key challenge is unimodal bias, where a network overly relies on one modality and ignores others during joint training. We develop a theory of unimodal bias with deep multimodal linear networks to understand how architecture and data statistics influence this bias. This is the first work to calculate the duration of the unimodal phase in learning as a function of the depth at which modalities are fused within the network, dataset statistics, and initialization. We show that the deeper the layer at which fusion occurs, the longer the unimodal phase. A long unimodal phase can lead to a generalization deficit and permanent unimodal bias in the overparametrized regime. Our results, derived for multimodal linear networks, extend to ReLU networks in certain settings. Taken together, this work illuminates pathologies of multimodal learning under joint training, showing that late and intermediate fusion architectures can give rise to long unimodal phases and permanent unimodal bias.
 			</td>
 		</tr>
 	</table>
