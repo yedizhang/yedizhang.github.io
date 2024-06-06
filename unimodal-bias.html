@@ -142,7 +142,6 @@
 		<span style="font-size:32px;font-weight:400">Understanding Unimodal Bias in Multimodal Deep Linear Networks</span>	
 		<table align=center width=600px>
 			<table align=center width=600px>
-				<tr><br></tr>
 				<tr><span style="font-size:20px;font-weight:400">ICML 2024</span></tr>
 				<tr>
 					<td align=center width=100px>
@@ -169,17 +168,32 @@
 						2: Sainsbury Wellcome Centre, University College London
 					</center>
 				</tr>
+				<tr><br></tr>
+			</table>
+			<table align=center width=160px>
+				<tr>
+					<td align=center width=80px>
+						<center>
+							<span style="font-size:20px"><a href="https://arxiv.org/abs/2312.00935"><img style="width:40px" src="img/doc-mark.svg" alt="My Happy SVG"/></a></span>
+						</center>
+					</td>
+					<td align=center width=80px>
+						<center>
+							<span style="font-size:20px"><a href="https://github.com/yedizhang/unimodal-bias"><img style="width:40px" src="img/github-mark.svg" alt="My Happy SVG"/></a></span>
+						</center>
+					</td>
+				</tr>
 			</table>
 		</table>
 	</center>
 	
-	<br><hr>
+	<hr>
 
 	<table align=center width=850px>
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				Using multiple input streams simultaneously to train multimodal neural networks is intuitively advantageous but practically challenging. A key challenge is unimodal bias, where a network overly relies on one modality and ignores others during joint training. We develop a theory of unimodal bias with deep multimodal linear networks to understand how architecture and data statistics influence this bias. This is the first work to calculate the duration of the unimodal phase in learning as a function of the depth at which modalities are fused within the network, dataset statistics, and initialization. We show that the deeper the layer at which fusion occurs, the longer the unimodal phase. A long unimodal phase can lead to a generalization deficit and permanent unimodal bias in the overparametrized regime. Our results, derived for multimodal linear networks, extend to ReLU networks in certain settings. Taken together, this work illuminates pathologies of multimodal learning under joint training, showing that late and intermediate fusion architectures can give rise to long unimodal phases and permanent unimodal bias.
+				Using multiple input streams simultaneously to train multimodal neural networks is intuitively advantageous but practically challenging. A key challenge is unimodal bias, where a network overly relies on one modality and ignores others during joint training. We develop a theory of unimodal bias with multimodal deep linear networks to understand how architecture and data statistics influence this bias. This is the first work to calculate the duration of the unimodal phase in learning as a function of the depth at which modalities are fused within the network, dataset statistics, and initialization. We show that the deeper the layer at which fusion occurs, the longer the unimodal phase. A long unimodal phase can lead to a generalization deficit and permanent unimodal bias in the overparametrized regime. Our results, derived for multimodal linear networks, extend to nonlinear networks in certain settings. Taken together, this work illuminates pathologies of multimodal learning under joint training, showing that late and intermediate fusion architectures can give rise to long unimodal phases and permanent unimodal bias.
 			</td>
 		</tr>
 	</table>
@@ -215,7 +229,7 @@
 		</table>
 	</center>
 
-	<br><hr>
+	<hr>
 
 	<table align=center width=850px>
 		<center><h1>Supplementary Material</h1></center>
@@ -230,7 +244,6 @@
 			</td>
 		</tr>
 	</table>
-	<br>
 
 	<hr>
 	<br>
