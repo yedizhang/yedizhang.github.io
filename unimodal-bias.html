@@ -4,7 +4,7 @@
 <style type="text/css">
 	body {
 		font-family: sans-serif; 
-		font-weight:300;
+		font-weight:400;
 		font-size:18px;
 		margin-left: auto;
 		margin-right: auto;
@@ -174,12 +174,12 @@
 				<tr>
 					<td align=center width=80px>
 						<center>
-							<span style="font-size:20px"><a href="https://arxiv.org/abs/2312.00935"><img style="width:40px" src="img/doc-mark.svg" alt="My Happy SVG"/></a></span>
+							<span><a href="https://arxiv.org/abs/2312.00935"><img style="width:40px" src="img/doc-mark.svg" alt="arxiv"/></a></span>
 						</center>
 					</td>
 					<td align=center width=80px>
 						<center>
-							<span style="font-size:20px"><a href="https://github.com/yedizhang/unimodal-bias"><img style="width:40px" src="img/github-mark.svg" alt="My Happy SVG"/></a></span>
+							<span><a href="https://github.com/yedizhang/unimodal-bias"><img style="width:40px" src="img/github-mark.svg" alt="github"/></a></span>
 						</center>
 					</td>
 				</tr>
@@ -203,16 +203,16 @@
 	<center>
 		<table align=center width=850px>
 			<tr>
-				<td width=260px>
+				<td width=400px>
 					<center>
-						<img class="round" style="width:500px" src="./img/unimodal-bias/L2_early_feat.gif"/>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/L2_early_feat.gif"/>
 					</center>
 				</td>
 			</tr>
 			<tr>
-				<td width=260px>
+				<td width=400px>
 					<center>
-						<img class="round" style="width:500px" src="./img/unimodal-bias/L2_late_feat.gif"/>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/L2_late_feat.gif"/>
 					</center>
 				</td>
 			</tr>
@@ -231,19 +231,98 @@
 
 	<hr>
 
-	<table align=center width=850px>
-		<center><h1>Supplementary Material</h1></center>
-		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="https://openreview.net/attachment?id=ul1cjLB98Y&name=supplementary_material">[zip]</a>
-			</center></td>
-		</tr>
-		<tr>
-			<td>
-				Videos of feature evolution corresponding to figures of training trajectories shown in the paper.
-			</td>
-		</tr>
-	</table>
+	<center><h1>Supplementary Material</h1></center>
+	<details>
+		<summary>Effect of positive/negative correlations between modalities</summary>
+		<table align=center width=900px>
+			<tr>
+				<td width=50px></td>
+				<td align=center width=400px>Early fusion linear network</td>
+				<td width=20px></td>
+				<td align=center width=400px>Late fusion linear network</td>
+			</tr>
+			<tr>
+				<td width=50px>Positive correlation</td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/L2_early_rho0.5_feat.gif"/>
+					</center>
+				<td width=20px></td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/L2_late_rho0.5_feat.gif"/>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td width=50px>Negative correlation</td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/L2_early_rho-0.5_feat.gif"/>
+					</center>
+				<td width=20px></td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/L2_late_rho-0.5_feat.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</details>
+
+	<details>
+		<summary>Nonlinear network and heterogeneous task</summary>
+		We present a simple heterogeneous task: y=x<sub>A</sub> + XOR(x<sub>B</sub>) where x<sub>A</sub> is a scalar and x<sub>B</sub>∈{[1,1], [1,-1],[-1,1], [-1,-1]}. XOR(x<sub>B</sub>) refers to performing XOR to the two dimensions of x<sub>B</sub>. We plot the loss and weights trajectories for different variances of x<sub>A</sub>.
+		<table align=center width=900px>
+			<tr>
+				<td width=50px></td>
+				<td align=center width=400px>Early fusion ReLU network</td>
+				<td width=20px></td>
+				<td align=center width=400px>Late fusion ReLU network</td>
+			</tr>
+			<tr>
+				<td width=50px>σ<sub>A</sub>=1</td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/ReLU_L2_early_xor_var1_feat.gif"/>
+					</center>
+				<td width=20px></td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/ReLU_L2_late_xor_var1_feat.gif"/>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td width=50px>σ<sub>A</sub>=2</td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/ReLU_L2_early_xor_var2_feat.gif"/>
+					</center>
+				<td width=20px></td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/ReLU_L2_late_xor_var2_feat.gif"/>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				<td width=50px>σ<sub>A</sub>=3</td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/ReLU_L2_early_xor_var3_feat.gif"/>
+					</center>
+				<td width=20px></td>
+				<td width=400px>
+					<center>
+						<img class="round" style="width:400px" src="./img/unimodal-bias/ReLU_L2_late_xor_var3_feat.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+		We observe that two-layer late fusion ReLU networks always learn this task successfully, forming the four perpendicular XOR features. However, two-layer early fusion ReLU networks do not learn consistent XOR features and can even fail to learn this task. In the failed cases, the variance of x<sub>A</sub> is large so that the network can be stuck at a local minimum where the network only exploits the linear modality. For this heterogeneous task, late fusion networks are advantageous in terms of extracting heterogeneous features from each input modality.
+	</details>
+
 
 	<hr>
 	<br>
