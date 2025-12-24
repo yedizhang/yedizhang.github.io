@@ -1,0 +1,276 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: sans-serif; 
+		font-weight:400;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:28px;
+		font-weight:400;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #2268c3;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #2268c3;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+
+<html>
+<head>
+	<title>Saddle-to-Saddle Dynamics Explains A Simplicity Bias Across Neural Network Architectures</title>
+	<meta property="og:image" content="./img/simplicity/GD.gif"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Saddle-to-Saddle Dynamics Explains A Simplicity Bias Across Neural Network Architectures" />
+	<meta property="og:description" content="We define a notion of simplicity that applies to a broad class of architectures, and show both analytically and with explicit examples that during learning simplicity decreases in a step-wise manner.
+" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJGLRC78GK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EJGLRC78GK');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:32px;font-weight:400">Saddle-to-Saddle Dynamics Explains A Simplicity Bias Across Neural Network Architectures</span>	
+		<table align=center width=600px>
+			<table align=center width=600px>
+				<tr><br></tr>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://yedizhang.github.io/">Yedi Zhang</a><sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.saxelab.org/people/andrewsaxe/">Andrew Saxe</a><sup>1,2</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.gatsby.ucl.ac.uk/~pel/">Peter Latham</a><sup>1</sup></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=250px>
+				<tr>
+					<center>
+						1: Gatsby Computational Neuroscience Unit, University College London <br>
+						2: Sainsbury Wellcome Centre, University College London
+					</center>
+				</tr>
+				<tr><br></tr>
+			</table>
+			<table align=center width=160px>
+				<tr><span style="font-size:20px;font-weight:400">2025 <a href="https://arxiv.org/abs/2512.20607">preprint</a></span></tr>
+			</table>
+		</table>
+	</center>
+	
+	<hr>
+
+	<table align=center width=850px>
+		
+		<center>
+			<img class="round" style="width:400px" src="./img/simplicity/GD.gif"/>
+		</center>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				Neural networks trained with gradient descent often learn solutions of increasing complexity over time, a phenomenon known as simplicity bias. Despite being widely observed across architectures, existing theoretical treatments lack a unifying framework. We present a theoretical framework that explains a simplicity bias arising from saddle-to-saddle learning dynamics for a general class of neural networks, incorporating fully-connected, convolutional, and attention-based architectures. Here, <i>simple</i> means expressible with few hidden units, i.e., hidden neurons, convolutional kernels, or attention heads. Specifically, we show that linear networks learn solutions of increasing rank, ReLU networks learn solutions with an increasing number of kinks, convolutional networks learn solutions with an increasing number of convolutional kernels, and self-attention models learn solutions with an increasing number of attention heads. By analyzing fixed points, invariant manifolds, and dynamics of gradient descent learning, we show that saddle-to-saddle dynamics operates by iteratively evolving near an invariant manifold, approaching a saddle, and switching to another invariant manifold. Our analysis also illuminates the effects of data distribution and initialization on the duration and number of plateaus in learning, dissociating previously confounding factors. Overall, our theory offers a framework for understanding when and why gradient descent progressively learns increasingly complex solutions.
+			</td>
+		</tr>
+	</table>
+	
+	<br>
+
+	<hr>
+
+	<center><h1>Saddle-to-saddle learning dynamics in a variety of network architectures</h1></center>
+	<table align=center width=900px>
+		<tr>
+			<td align=center width=400px>Type I</td>
+			<td width=20px></td>
+			<td align=center width=400px>Type II</td>
+			<td width=20px></td>
+			<td align=center width=400px>Type III</td>
+		</tr>
+		<tr>
+			<td width=400px>
+				<center>
+					<img class="round" style="width:400px" src="./img/simplicity/lin_hid50.gif"/>
+				</center>
+				<center>Linear fully-connected network</center>
+			<td width=20px></td>
+			<td width=400px>
+				<center>
+					<img class="round" style="width:400px" src="./img/simplicity/relu_ortho_hid50.gif"/>
+				</center>
+				<center>ReLU fully-connected network</center>
+			</td>
+			<td width=20px></td>
+			<td width=400px>
+				<center>
+					<img class="round" style="width:400px" src="./img/simplicity/attnS_head10.gif"/>
+				</center>
+				<center>Linear self-attention</center>
+			</td>
+		</tr>
+		<tr>
+			<td width=400px>
+				<center>
+					<img class="round" style="width:400px" src="./img/simplicity/cnn_hid50.gif"/>
+				</center>
+				<center>Linear convolutional network</center>
+			<td width=20px></td>
+			<td width=400px>
+				<center>
+					<img class="round" style="width:400px" src="./img/simplicity/relu_cnn_hid50.gif"/>
+				</center>
+				<center>ReLU convolutional network</center>
+			</td>
+			<td width=20px></td>
+			<td width=400px>
+				<center>
+					<img class="round" style="width:400px" src="./img/simplicity/quadratic_hid10.gif"/>
+				</center>
+				<center>Quadratic network</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+Across the six two-layer networks with different architectures, gradient descent learning all exhibits saddle-to-saddle dynamics.
+During the intermediate plateau, the network visits a saddle in weight space, at which it implements a solution expressible by the architecture with a single unit. At the end of learning, the network converges to a stable fixed point, at which it implements a solution expressible with two units. 
+The fixed points visited during learning fall into three different categories described in <a href="https://arxiv.org/html/2512.20607v1#S3">Theorem 1 of the paper</a>:
+<ul>
+  <li>Type I: the rank of the weights increases during learning.</li>
+  <li>Type II: the number of rays of proportional weights increases during learning.</li>
+  <li>Type III: the number of hidden units with nonzero weights increases during learning. </li>
+</ul>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<center>
+					This webpage template is borrowed from <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</center>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
