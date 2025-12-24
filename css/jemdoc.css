@@ -337,16 +337,14 @@ img.eqwl {
 }
 
 table {
-    border: 2px solid black;
     border-collapse: collapse;
 }
 
-td {
-    padding: 2px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    text-align: center;
-    border: 1px solid gray;
+td,th {
+    padding: 5px;
+    padding-right: 1em;
+    text-align: left;
+    border: 0.6px solid Silver;
 }
 
 table + table {
