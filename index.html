@@ -19,27 +19,14 @@
   gtag('config', 'G-EJGLRC78GK');
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>   
+<script src="css/tab.js"></script>
 </head>
 
 <body>
 
 <table summary="Table for page layout." id="tlayout">
 <tr valign="top">
-
-
-<!-- <td id="layout-menu">
-<div class="menu-item"><a href="./index.html" class="current">About</a></div>
-<div class="menu-item"><a href="./blog.html">Blogs</a></div>
-<div class="menu-item"><a href="./link.html">Links</a></div>
-</td> -->
-
-<!-- <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
-    <div id="layout-menu">
-        <a href="#Bio">Bio</a>
-        <a href="#Paper">Paper</a>
-        <a href="#Blog">Blog</a>
-    </div>
-</nav> -->
 
 
 <td id="layout-content"><table class="imgtable"><tr><td align="left">
@@ -50,7 +37,7 @@
 <a href="img/Tibidabo.jpg"><img src="img/Tibidabo.jpg" alt="" width="200px" /></a>&nbsp;</td>
 <td style="text-align: left">
 <p style="font-size:150%;font-weight:600">Yedi Zhang &nbsp;张叶荻</p>
-<p>PhD student<br/>
+<p>PhD candidate<br/>
 <a href="https://www.ucl.ac.uk/gatsby/">Gatsby Computational Neuroscience Unit</a><br />
 <a href="https://www.ucl.ac.uk/">University College London</a><br />
 25 Howland Street, London W1T 4JG<br /><br />
@@ -59,28 +46,33 @@ Email: yedi@gatsby.ucl.ac.uk</p></td>
 
 <h2 style="margin-top:10px;">Bio</h2>
 <p>
-  I am a PhD student at Gatsby Computational Neuroscience Unit UCL, advised by <a href="https://www.gatsby.ucl.ac.uk/~pel/">Peter Latham</a> and <a href="https://www.saxelab.org/people/andrewsaxe/">Andrew Saxe</a>.<br />
-  I use theoretical approaches to study how neural networks with different architectures <a href="https://arxiv.org/abs/2512.20607">[1]</a> learn, including attention-based <a href="https://arxiv.org/abs/2501.16265">[2]</a>, fully-connected <a href="https://arxiv.org/abs/2406.12615">[3]</a>, and multimodal <a href="https://arxiv.org/abs/2312.00935">[4]</a> networks.
-</p>
+  I am a PhD candidate at the Gatsby Unit UCL, advised by <a href="https://www.gatsby.ucl.ac.uk/~pel/">Peter Latham</a> and <a href="https://www.saxelab.org/people/andrewsaxe/">Andrew Saxe</a>.
+  I use theoretical approaches to study how neural networks with different architectures [<a href="https://arxiv.org/abs/2512.20607">ZSL26</a>] learn, including attention-based [<a href="https://arxiv.org/abs/2501.16265">ZSLS25</a>], fully-connected [<a href="https://arxiv.org/abs/2406.12615">ZSL25</a>], and multimodal [<a href="https://arxiv.org/abs/2312.00935">ZLS24</a>] networks.
   <!-- I am currently visiting <a href="https://web.stanford.edu/~jlmcc/index.html">Jay McClelland</a> and <a href="https://lampinen.github.io/">Andrew Lampinen</a> at Stanford University, supported by a <a href="https://www.ucl.ac.uk/life-sciences/study/funding-and-scholarships/bogue-fellowships">Bogue fellowship</a>. -->
   <!-- I am interested in how neural networks with various architectures learn. Previously, I worked on 3D computer vision at <a href="https://www.dji.com/">DJI</a> R&D and <a href="https://www.cse.cuhk.edu.hk/">CUHK CSE</a>; and did undergrad at <a href="http://english.hust.edu.cn/">HUST</a>. -->
+</p>
 
-<h2 style="margin-top:10px;">Paper</h2>
+<h2 style="margin-top:10px;">Publication</h2>
 
-<table class="imgtable"><tr>
-<td style="vertical-align: top;">[1]</td>
+<div class="menu" style="margin-top:10px;margin-bottom:10px;">
+  <button class="link active-link" id="short-tab">Selected papers</button>
+  <button class="link" id="full-tab">All papers</button>
+</div>
+
+<div id="short" class="content active">
+<table class="imgtable">
+<tr>
 <td style="text-align: center; width: 220px;">
 <a href="./img/simplicity/GD_manifold.gif"><img src="./img/simplicity/GD.gif" alt="" width="140px" /></a>&nbsp;</td>
 <td align="left">
   <p ><span style="font-weight:600">Saddle-to-Saddle Dynamics Explains A Simplicity Bias Across Neural Network Architectures</span> <br />
   Yedi Zhang, Andrew Saxe, Peter E. Latham<br />
   ICLR 2026<br />
-  <a href="./simplicity.html">webpage</a> | <a href="https://openreview.net/forum?id=Vit5M0G5Gb">openreview</a> | <a href="https://arxiv.org/abs/2512.20607">arxiv</a> | <a href="https://emoji.slack-edge.com/T023LJSBL5U/saddle_dynamics/de98dfda2663bfd9.gif">emoji</a> | <a href="https://youtu.be/ULJNvC1lUH0">talk</a> </p>
-</td></tr>
-</table>
+  <a href="./simplicity.html">webpage</a> | <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/5e96d63b20f335f57999a1aca7fa0474-Abstract-Conference.html">iclr</a> | <a href="https://openreview.net/forum?id=Vit5M0G5Gb">openreview</a> | <a href="https://arxiv.org/abs/2512.20607">arxiv</a> | <a href="https://emoji.slack-edge.com/T023LJSBL5U/saddle_dynamics/de98dfda2663bfd9.gif">emoji</a> | <a href="https://youtu.be/ULJNvC1lUH0">talk</a> </p>
+</td>
+</tr>
 
-<table class="imgtable"><tr>
-<td style="vertical-align: top;">[2]</td>
+<tr>
 <td style="width: 220px;">
 <a href="img/attnS.gif"><img src="img/attnS.gif" alt="" width="200px" /></a>&nbsp;</td>
 <td align="left">
@@ -89,23 +81,10 @@ Email: yedi@gatsby.ucl.ac.uk</p></td>
   ICML 2025 <b>(Spotlight)</b><br />
   <a href="https://proceedings.mlr.press/v267/zhang25br.html">pmlr</a> | <a href="https://openreview.net/forum?id=aFNq67ilos">openreview</a> | <a href="https://arxiv.org/abs/2501.16265">arxiv</a> | <a href="https://github.com/yedizhang/linattn-icl">code</a> |
   <a href="https://youtu.be/HgV84NiFL0c?si=9ZP5Da2bruK4yvKM">talk</a> </p>
-</td></tr>
-</table>
+</td>
+</tr>
 
-<table class="imgtable"><tr>
-<td style="vertical-align: top;">[3]</td>
-<td style="width: 220px;">
-<a href="img/relu-linear.png"><img src="img/relu-linear.png" alt="" width="200px" /></a>&nbsp;</td>
-<td align="left">
-  <p ><span style="font-weight:600">When Are Bias-Free ReLU Networks Effectively Linear Networks?</span> <br />
-  Yedi Zhang, Andrew Saxe, Peter E. Latham<br />
-  TMLR 2025<br />
-  <a href="https://openreview.net/forum?id=Ucpfdn66k2">tmlr</a> | <a href="https://arxiv.org/abs/2406.12615">arxiv</a> </p>
-</td></tr>
-</table>
-
-<table class="imgtable"><tr>
-<td style="vertical-align: top;">[4]</td>
+<tr>
 <td style="width: 220px;">
 <a href="img/unimodal-bias/L2_late_feat.gif"><img src="img/unimodal-bias/L2_late_feat.gif" alt="" width="200px" /></a>&nbsp;</td>
 <td align="left">
@@ -113,8 +92,58 @@ Email: yedi@gatsby.ucl.ac.uk</p></td>
   Yedi Zhang, Peter E. Latham, Andrew Saxe<br />
   ICML 2024<br />
   <a href="./unimodal-bias.html">webpage</a> | <a href="https://proceedings.mlr.press/v235/zhang24aa.html">pmlr</a> | <a href="https://arxiv.org/abs/2312.00935">arxiv</a> | <a href="https://github.com/yedizhang/unimodal-bias">code</a> </p>
-</td></tr>
+</td>
+</tr>
 </table>
+</div>
+
+<div id="full" class="content">
+<p style="margin-top:5px;margin-bottom:5px"> Conference proceeding </p>
+
+<ul>
+  <li><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/5e96d63b20f335f57999a1aca7fa0474-Abstract-Conference.html">Saddle-to-saddle dynamics explains a simplicity bias across neural network architectures</a> <br />
+  Yedi Zhang, Andrew Saxe, Peter E. Latham <br />
+  International Conference on Learning Representations (ICLR), 2026 </li>
+  <li><a href="https://proceedings.mlr.press/v267/zhang25br.html">Training dynamics of in-context learning in linear attention</a> <br />
+  Yedi Zhang, Aaditya K. Singh, Peter E. Latham*, Andrew Saxe* <br />
+  International Conference on Machine Learning (ICML), Spotlight, 2025 </li>
+  <li><a href="https://proceedings.mlr.press/v235/zhang24aa.html">Understanding unimodal bias in multimodal deep linear networks</a> <br />
+  Yedi Zhang, Peter E. Latham, Andrew Saxe <br />
+  International Conference on Machine Learning (ICML), 2024 </li>
+</ul>
+
+<p style="margin-top:5px;margin-bottom:5px"> Journal article </p>
+
+<ul>
+  <li><a href="https://openreview.net/forum?id=Ucpfdn66k2">When are bias-free ReLU networks effectively linear networks?</a> <br />
+  Yedi Zhang, Andrew Saxe, Peter E. Latham <br />
+  Transactions on Machine Learning Research (TMLR), 2025
+  </li>
+</ul>
+
+<p style="margin-top:5px;margin-bottom:5px"> Preprint </p>
+
+<ul>
+  <li><a href="https://arxiv.org/abs/2603.00742">To use or not to use muon: how simplicity bias in optimizers matters</a> <br />
+  Sara Dragutinović, Yedi Zhang, Rajesh Ranganath <br />
+  2026
+  </li>
+</ul>
+
+<p style="margin-top:5px;margin-bottom:5px"> Non-archival conference </p>
+
+<ul>
+  <li><a href="https://2026.ccneuro.org/poster/?id=QYZMpFi6mS">Transitivity can redeem the reversal curse in attention models</a> <br />
+  Yedi Zhang, Andrew Lampinen*, James McClelland* <br />
+  Annual Conference on Cognitive Computational Neuroscience (CCN), 2026
+  </li>
+  <li><a href="https://arxiv.org/abs/2607.07884">Optimal learning rate scaling depends on data in deep scalar linear networks</a> <br />
+  Yedi Zhang, Peter E. Latham, Leena Chennuru Vankadara, Andrew Saxe <br />
+  ICLR Workshop on Scientific Methods for Understanding Deep Learning, 2026
+  </li>
+</ul>
+</div>
+
 
 <h2 style="margin-top:10px;">Blog</h2>
 <p>
